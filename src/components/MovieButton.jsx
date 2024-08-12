@@ -1,6 +1,15 @@
-function MovieButton () {
+function MovieButton (props) {
+    // const newMovie = 'Frozen';
+
+    const getNewMovie = (evt) => {
+        evt.preventDefault();
+        props.moviesearch(props.newMovie);
+    }
+
     return (
-        <h2>MovieButton Component</h2>
+        <form onSubmit={getNewMovie}>
+            <input type='submit' value={props.newMovie}/>
+        </form>
     )
 }
 
