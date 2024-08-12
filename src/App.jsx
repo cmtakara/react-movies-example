@@ -45,13 +45,16 @@ function App() {
   // instead of using the below line of code which causes issues, I can useEffect
   // getMovie('batman');
   useEffect(() => {
-    getMovie('batman');
-  }, [])
+    const movieArray = ['Clueless', 'Mulan', 'lilo & stitch', 'batman', 'air bud'];
+    const firstMovie = movieArray[Math.floor(Math.random() * movieArray.length)];
+    // getMovie('batman');
+    getMovie(firstMovie);
+  }, [updateMovie])
 
   return (
     <>
   <h1>This is the main App</h1>
-  <UpdateButton/>
+  <UpdateButton updateMovie={updateMovie} setUpdateMovie={setUpdateMovie}/>
   <Form />
   <MovieButton />
   <MovieDisplay movie={movie}/>
