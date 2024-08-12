@@ -54,7 +54,7 @@ function App() {
   <UpdateButton/>
   <Form />
   <MovieButton />
-  <MovieDisplay />
+  <MovieDisplay movie={movie}/>
     </>
   )
 }
