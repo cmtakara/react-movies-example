@@ -55,7 +55,7 @@ function App() {
     <>
   <h1>This is the main App</h1>
   <UpdateButton updateMovie={updateMovie} setUpdateMovie={setUpdateMovie}/>
-  <Form />
+  <Form moviesearch={getMovie}/>
   <MovieButton newMovie='Frozen' moviesearch={getMovie}/>
   <MovieButton newMovie='Tangled' moviesearch={getMovie}/>
   <MovieButton newMovie='Encanto' moviesearch={getMovie}/>
