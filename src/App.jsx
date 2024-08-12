@@ -38,7 +38,15 @@ function App() {
 
   }
 
+  // general form of useEffect
+  // useEffect(callback, [dependencyArray])
+  // only runs when I first load this component
+  // useEffect(callback, [])
+  // instead of using the below line of code which causes issues, I can useEffect
   // getMovie('batman');
+  useEffect(() => {
+    getMovie('batman');
+  }, [])
 
   return (
     <>
